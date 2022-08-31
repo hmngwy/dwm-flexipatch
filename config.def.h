@@ -148,7 +148,9 @@ static const char font[]                 = "FiraCode 11";
 #else
 static const char *fonts[]               = { "FiraCode:size=11" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "FiraCode:size=11";
+static const char dmenufont[]            = "FiraCode:size=12";
+static const char dmenugridcols[]            = "2";
+static const char dmenugridrows[]            = "5";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -854,6 +856,8 @@ static const char *dmenucmd[] = {
 	"-nf", normfgcolor,
 	"-sb", selbgcolor,
 	"-sf", selfgcolor,
+	"-g", dmenugridcols,
+	"-l", dmenugridrows,
 	#if BAR_DMENUMATCHTOP_PATCH
 	topbar ? NULL : "-b",
 	#endif // BAR_DMENUMATCHTOP_PATCH
